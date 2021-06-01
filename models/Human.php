@@ -5,9 +5,9 @@ include_once('./models/Character.php');
 class Human extends Character{
 
 
-    private function __construct(){
+    public function __construct(){
         parent::__construct();
-        $this->$health *= 1.15;
+        $this->health *= 1.15;
     }
 }
 
