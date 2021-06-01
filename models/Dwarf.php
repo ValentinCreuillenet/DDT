@@ -7,7 +7,7 @@ class Dwarf extends Character{
 
     public function __construct(){
         parent::__construct();
-        $this->health *= 1.6;
+        $this->health *= 1.5;
     }
 }
 

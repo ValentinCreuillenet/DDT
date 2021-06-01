@@ -8,16 +8,23 @@ foreach ($folder as $file){
     }
 }
 
-include_once("./Fight.php");
+include_once("./FightManager.php");
 
-$dudu = new Fight();
+$domeDuTonnerre = FightManager::getInstance();
 
 $loic = new Human();
 $loic->setName("Loïc");
 
-$pierre = new Human();
+$pierre = new Dwarf();
 $pierre->setName("Pierre");
 
-$dudu->deathFight($loic,$pierre);
+$yassine = new Orc();
+$yassine->setName("Yassine");
+
+$domeDuTonnerre->addToFight($loic);
+$domeDuTonnerre->addToFight($yassine);
+$domeDuTonnerre->addToFight($pierre);
+
+$domeDuTonnerre->deathFight();
 
 ?>

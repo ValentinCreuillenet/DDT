@@ -42,13 +42,9 @@ class Character{
     public function attack($target){
 
         $multiplier = rand(10,20)/10;
-
         $damage = round(($this->force * $multiplier) - ($target->endurance/2));
-
         if($damage <=0) $damage = 1;
-
         $target->health -= $damage;
-
         return $damage;
     }
 }
