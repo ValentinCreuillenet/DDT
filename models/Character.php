@@ -9,14 +9,16 @@ class Character{
 
     public $name;
 
-    protected function __construct($role = 0){
-     $this->health = 80;
-     $this->force=10;
-     $this->agility=10;
-     $this->endurance=10;
-     $this->role = $role;
-     $this->attributes=array(&$this->force,&$this->agility,&$this->endurance);
-     $this->setStats();
+    protected function __construct($name , $role){
+
+        $this->name = $name;
+        $this->role = $role;
+        $this->health = 80;
+        $this->force=10;
+        $this->agility=10;
+        $this->endurance=10;
+        $this->attributes=array(&$this->force,&$this->agility,&$this->endurance);
+        $this->setStats();
 
     }
 
